@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/list">
+
+    <fragment
+        android:id="@+id/list"
+        android:name="com.example.less6navigation.ListFragment"
+        tools:layout="@layout/fragment_list">
+
+        <action
+            android:id="@+id/to_counter"
+            app:destination="@+id/counter" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/counter"
+        android:name="com.example.less6navigation.CounterFragment"
+        tools:layout="@layout/fragment_counter">
+
+        <argument
+            android:name="key_counter"
+            app:argType="integer" />
+    </fragment>
+</navigation>
